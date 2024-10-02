@@ -11,7 +11,7 @@
     ../home/modules/games/openra.nix
     ../home/modules/cli-os.nix
     ../home/modules/editors.nix
-    # ../home/modules/fonts.nix
+    ../home/modules/graphical.nix
     ../home/modules/gnome.nix
     ../home/modules/gui.nix
     ../home/modules/home-manager.nix
