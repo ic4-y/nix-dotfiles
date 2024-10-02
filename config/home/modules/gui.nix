@@ -54,6 +54,9 @@ in
     unstable.zulip
     unstable.mattermost-desktop
 
+    # OnlyOffice
+    unstable.onlyoffice-bin
+
     # display color calibration 
     unstable.displaycal
 
@@ -85,10 +88,8 @@ in
     # Extract text from image
     unstable.gnome-frog
 
+    # Calibre ebooks
     calibre
-
-    # Brave browser
-    # unstable.brave
 
     # Creating a wrapper for chromium to run it in firejail
     (symlinkJoin {
@@ -108,9 +109,7 @@ in
       ];
     })
 
-    # tor
-    # unstable.onionshare-gui
-    # unstable.onionshare
+    # Tor-Browser
     unstable.tor-browser-bundle-bin
 
     # Zotero
@@ -120,7 +119,7 @@ in
 
   programs.brave = {
     enable = true;
-    package = pkgs.unstable.brave;
+    package = pkgs.brave;
     commandLineArgs = [
       "--enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,VaapiVideoEncoder,VaapiVideoDecoder,VaapiIgnoreDriverChecks,VaapiVideoDecodeLinuxGL"
       "--use-gl=angle"
