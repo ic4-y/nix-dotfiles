@@ -25,7 +25,7 @@ in
     data.changelog = {
       remote = "github.com";
       repository = "nix-dotfiles";
-      owner = "icodeforyou-dot-net";
+      owner = "ic4-y";
     };
   };
 }

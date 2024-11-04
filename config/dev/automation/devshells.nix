@@ -10,6 +10,7 @@ in
     imports = [ std.devshellProfiles.default ];
     commands = [
       { package = pkgs.nil; }
+      { package = pkgs.nixd; }
       { package = pkgs.nixpkgs-fmt; }
       { package = pkgs.sops; }
       { package = pkgs.age; }
