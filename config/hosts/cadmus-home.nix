@@ -1,10 +1,18 @@
 { inputs, system, ... }:
+let
+  terminalFontFamily = "JetBrainsMono Nerd Font";
+  scaleFactor = 1.0;
+in
 {
   imports = [
     ../home/modules/apps/element-desktop.nix
-    ../home/modules/apps/alacritty.nix
+    (import ../home/modules/apps/alacritty.nix { inherit terminalFontFamily scaleFactor; })
     ../home/modules/apps/atuin.nix
-    # ../home/modules/apps/lf.nin
+    ../home/modules/apps/carapace.nix
+    (import ../home/modules/apps/foot.nix { inherit terminalFontFamily scaleFactor; })
+    ../home/modules/apps/nushell.nix
+    ../home/modules/apps/lf.nix
+    ../home/modules/apps/tmux.nix
     ../home/modules/scripts
     ../home/modules/cli-os.nix
     ../home/modules/editors.nix
@@ -14,12 +22,7 @@
     ../home/modules/home-manager.nix
     ../home/modules/languages.nix
     (import ../home/modules/nvim.nix { inherit inputs system; })
-    ../home/modules/wayland.nix
     #../home/modules/xdg.nix
-    ../home/modules/xresources.nix
+    (import ../home/modules/xresources.nix { inherit scaleFactor; })
   ];
-
-  xresources.properties = {
-    "Xft.dpi" = 96;
-  };
 }

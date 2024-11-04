@@ -2,7 +2,7 @@
 
 let
   bitwarden-wrapper = with pkgs; (writeShellScriptBin "bitwarden" ''
-    exec ${unstable.bitwarden}/bin/bitwarden --disable-gpu
+    exec ${bitwarden}/bin/bitwarden --disable-gpu
   '');
 
   wrapped-chromium = with pkgs; (writeShellScriptBin "chromium" ''
@@ -29,7 +29,7 @@ in
       name = "bitwarden";
       paths = [
         bitwarden-wrapper
-        unstable.bitwarden
+        bitwarden
       ];
     })
 

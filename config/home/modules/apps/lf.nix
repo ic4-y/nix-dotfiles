@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  xdg.configFile."lf/icons".source = ./lf-icons;
+  xdg.configFile."lf/icons".source = ../config/lf-icons;
 
   programs.lf = {
     enable = true;

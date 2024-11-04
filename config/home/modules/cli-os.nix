@@ -58,6 +58,7 @@
   programs.bash = {
     enable = true;
     profileExtra = ''
+      export EDITOR=nvim 
       export MOZ_ENABLE_WAYLAND=1
       export MOZ_USE_XINPUT2=1
       export NIXPKGS_ALLOW_UNFREE=1
@@ -83,6 +84,8 @@
       alias k='kubectl'
       alias kctx='kubectx'
       alias kns='kubens'
+
+      alias v='nvim'
 
       alias js='cd ''${HOME}/Coding/javascript'
       alias py='cd ''${HOME}/Coding/python'

@@ -1,8 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, scaleFactor, terminalFontFamily, ... }:
 let
   wrapped-alacritty = with pkgs; (writeShellScriptBin "alacritty" ''
     if pgrep ".gnome-shell" > /dev/null; then env WAYLAND_DISPLAY= ${pkgs.alacritty}/bin/alacritty; else ${pkgs.alacritty}/bin/alacritty; fi
   '');
+  baseFontSize = 11; # Base font size
+  computedFontSize = baseFontSize * scaleFactor;
 in
 {
   home.packages = with pkgs; [
@@ -29,14 +31,15 @@ in
       ]
 
       [font]
-      size = 11
+      # size = 11
+      size = ${toString computedFontSize}
 
       [font.bold]
-      family = "JetBrainsMono Nerd Font"
+      family = ${terminalFontFamily}
       style = "Bold"
 
       [font.normal]
-      family = "JetBrainsMono Nerd Font"
+      family = ${terminalFontFamily}
       style = "Regular"
 
       [window.padding]

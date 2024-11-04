@@ -54,7 +54,7 @@
 
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode;
+    package = pkgs.vscode-fhs;
 
     extensions = with pkgs; [
       unstable.vscode-extensions.pkief.material-icon-theme
@@ -67,37 +67,47 @@
       unstable.vscode-extensions.haskell.haskell
       unstable.vscode-extensions.astro-build.astro-vscode
       # unstable.vscode-extensions.ms-vscode.cpptools
-      # unstable.vscode-extensions.ms-python.python
       unstable.vscode-extensions.ms-python.vscode-pylance
       unstable.vscode-extensions.ms-toolsai.jupyter
-      # unstable.vscode-extensions.ms-azuretools.vscode-docker
       unstable.vscode-extensions.rust-lang.rust-analyzer
-      unstable.vscode-extensions.ms-vscode-remote.remote-ssh
       unstable.vscode-extensions.redhat.vscode-yaml
       unstable.vscode-extensions.tamasfe.even-better-toml
 
-      # Continue.dev extension not yet in nixpkgs
-      (unstable.vscode-utils.buildVscodeMarketplaceExtension {
-        mktplcRef = {
-          name = "continue";
-          publisher = "Continue";
-          version = "0.9.67";
-          sha256 = "sha256-xdM2zLIO4ydGt4M1hDDXEqQgXK2LYBRwOS5QfvG+aQ4=";
-          arch = "linux-x64";
-        };
+      # Continue.dev extension
+      # (unstable.vscode-utils.buildVscodeMarketplaceExtension {
+      #   mktplcRef = {
+      #     name = "continue";
+      #     publisher = "Continue";
+      #     # version = "0.9.67";
+      #     version  = "0.9.221";
+      #     # sha256 = "sha256-xdM2zLIO4ydGt4M1hDDXEqQgXK2LYBRwOS5QfvG+aQ4=";
+      #     sha256 = "sha256-KwMAMmQ6ZMkRGvmIOo1SDF6TwZZyEutyLjQ2+ODf7Go=";
+      #     arch = "linux-x64";
+      #   };
 
-        nativeBuildInputs = [
-          pkgs.autoPatchelfHook
-        ];
+      #   nativeBuildInputs = [
+      #     pkgs.autoPatchelfHook
+      #   ];
 
-        buildInputs = [ pkgs.stdenv.cc.cc.lib ];
+      #   buildInputs = [ pkgs.stdenv.cc.cc.lib ];
 
-        postInstall = ''
-          cd "$out/$installPrefix"
-          substituteInPlace "out/extension.js" \
-            --replace 'await showTutorial();' '//await showTutorial();'
-        '';
-      })
+      #   postInstall = ''
+      #     cd "$out/$installPrefix"
+      #     substituteInPlace "out/extension.js" \
+      #       --replace 'await showTutorial();' '//await showTutorial();'
+      #   '';
+      # })
+
+      #   # BasedPyright extension
+      #   (unstable.vscode-utils.buildVscodeMarketplaceExtension {
+      #     mktplcRef = {
+      #       name = "basedpyright";
+      #       publisher = "detachhead";
+      #       version  = "1.19.1";
+      #       sha256 = "";
+      #       arch = "linux-x64";
+      #     };
+      #   })
     ];
 
     userSettings = {
@@ -112,27 +122,9 @@
       "[nix]"."editor.tabSize" = 2;
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
-      "python.formatting.provider" = "black";
+      "python.formatting.provider" = "ruff --format";
       "python.linting.enabled" = true;
-      "python.linting.flake8Enabled" = true;
-      "python.linting.flake8Args" = [
-        "--max-line-length=120"
-        "--ignore=E402,F841,F401,E302,E305"
-      ];
       "python.linting.lintOnSave" = true;
-      "python.linting.mypyEnabled" = true;
-      "python.linting.mypyArgs" = [
-        "--ignore-missing-imports"
-        "--follow-imports=silent"
-        "--show-column-numbers"
-        "--strict"
-      ];
-      "python.linting.pylintEnabled" = true;
-      "python.linting.pylintArgs" = [
-        "--disable=missing-module-docstring"
-        "--disable=missing-class-docstring"
-        "--disable=missing-function-docstring"
-      ];
       "redhat.telemetry.enabled" = false;
       "telemetry.telemetryLevel" = "off";
       "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font'";
