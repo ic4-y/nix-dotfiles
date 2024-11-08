@@ -13,6 +13,7 @@ in
     ../home/modules/apps/nushell.nix
     ../home/modules/apps/lf.nix
     ../home/modules/apps/tmux.nix
+    ../home/modules/apps/yazi.nix
     # ../home/modules/apps/davinci-resolve.nix
     ../home/modules/games/dosbox.nix
     ../home/modules/games/games.nix

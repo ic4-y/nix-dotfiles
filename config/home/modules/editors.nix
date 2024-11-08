@@ -121,7 +121,7 @@
       "extensions.autoCheckUpdates" = false;
       "[nix]"."editor.tabSize" = 2;
       "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "nil";
+      "nix.serverPath" = "nixd";
       "python.formatting.provider" = "ruff --format";
       "python.linting.enabled" = true;
       "python.linting.lintOnSave" = true;

@@ -72,6 +72,9 @@ in
       ];
     })
 
+    # Alternative Discord desktop client
+    unstable.vesktop
+
     # bruno API client, bye bye insomnia
     unstable.bruno
 
