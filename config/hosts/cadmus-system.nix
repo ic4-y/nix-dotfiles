@@ -24,6 +24,7 @@
     ../sys/modules/virtualization.nix
     ../sys/modules/xserver-2k.nix
     ../sys/modules/xserver-touchpad.nix
+    ../sys/modules/zerotier.nix
   ];
 
   hardware.enableAllFirmware = true;
