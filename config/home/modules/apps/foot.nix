@@ -1,6 +1,6 @@
 { scaleFactor, terminalFontFamily }:
 let
-  baseFontSize = 11;
+  baseFontSize = 13;
 in
 {
   # foot terminal
@@ -27,7 +27,7 @@ in
       #vertical-letter-offset=0
       #underline-offset=0
       #box-drawings-uses-font-glyphs=no
-      dpi-aware=no
+      #dpi-aware=no
 
       [scrollback]
       lines=1000
@@ -48,24 +48,24 @@ in
       # background=11111b
 
       ## Normal/regular colors (color palette 0-7)
-      regular0=6e6c7e  # black
-      regular1=f28fad  # red
-      regular2=abe9b3  # green
-      regular3=fae3b0  # yellow
-      regular4=96cdfb  # blue
-      regular5=f5c2e7  # magenta
-      regular6=89dceb  # cyan
-      regular7=d9e0ee  # white
+      regular0=51576d  # black
+      regular1=e78284  # red
+      regular2=a6d189  # green
+      regular3=e5c890  # yellow
+      regular4=8caaee  # blue
+      regular5=f4b8e4  # magenta
+      regular6=81c8be  # cyan
+      regular7=b5bfe2  # white
 
       ## Bright colors (color palette 8-15)
-      bright0=988ba2   # bright black
-      bright1=f28fad   # bright red
-      bright2=abe9b3   # bright green
-      bright3=fae3b0   # bright yellow
-      bright4=96cdfb   # bright blue
-      bright5=f5c2e7   # bright magenta
-      bright6=89dceb   # bright cyan
-      bright7=d9e0ee   # bright white
+      bright0=626880   # bright black
+      bright1=e78284   # bright red
+      bright2=a6d189   # bright green
+      bright3=e5c890   # bright yellow
+      bright4=8caaee   # bright blue
+      bright5=f4b8e4   # bright magenta
+      bright6=81c8be   # bright cyan
+      bright7=a5adce   # bright white
 
       [csd]
       preferred=server

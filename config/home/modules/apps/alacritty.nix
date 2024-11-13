@@ -35,11 +35,11 @@ in
       size = ${toString computedFontSize}
 
       [font.bold]
-      family = ${terminalFontFamily}
+      family = "${terminalFontFamily}"
       style = "Bold"
 
       [font.normal]
-      family = ${terminalFontFamily}
+      family = "${terminalFontFamily}"
       style = "Regular"
 
       [window.padding]
