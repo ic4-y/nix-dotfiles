@@ -1,4 +1,4 @@
-{}:
+{ ... }:
 {
   services.zerotierone = {
     enable = true;
