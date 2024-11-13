@@ -6,6 +6,6 @@
     "Xcursor.theme" = "Simp1e-Catppuccin-Frappe";
     "Xft.lcdfilter" = "lcddefault";
     "Xft.hintsyle" = "hintful";
-    "Xft.dpi" = 96 * scaleFactor;
+    "Xft.dpi" = builtins.floor (96 * scaleFactor);
   };
 }
