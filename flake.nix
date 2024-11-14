@@ -133,7 +133,7 @@
               {
                 nixpkgs.overlays = [ overlay-unstable overlay-custom ];
               }
-              (import ./config/hosts/cadmus-home.nix { inherit inputs system; })
+              (import ./config/hosts/cadmus-home.nix { inherit pkgs inputs system; })
             ];
           };
         };
