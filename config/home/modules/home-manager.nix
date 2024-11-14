@@ -11,4 +11,8 @@
   # nixpkgs.overlays = [ overlay-unstable overlay-custom ];
 
   programs.home-manager.enable = true;
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 }
