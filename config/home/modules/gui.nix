@@ -90,6 +90,8 @@ in
     unstable.blanket
     # Extract text from image
     unstable.gnome-frog
+    # upscayl AI image upscaler
+    unstable.upscayl
 
     # Calibre ebooks
     calibre
