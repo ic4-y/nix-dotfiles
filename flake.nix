@@ -113,7 +113,7 @@
               {
                 nixpkgs.overlays = [ overlay-unstable overlay-custom ];
               }
-              (import ./config/hosts/archon-home.nix { inherit inputs system; })
+              (import ./config/hosts/archon-home.nix { inherit pkgs inputs system; })
             ];
           };
 
@@ -123,7 +123,7 @@
               {
                 nixpkgs.overlays = [ overlay-unstable overlay-custom ];
               }
-              (import ./config/hosts/perseus-home.nix { inherit inputs system; })
+              (import ./config/hosts/perseus-home.nix { inherit pkgs inputs system; })
             ];
           };
 

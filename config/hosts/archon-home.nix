@@ -1,16 +1,17 @@
-{ inputs, system, ... }:
+{ pkgs, inputs, system, ... }:
 let
   terminalFontFamily = "JetBrainsMono Nerd Font";
-  scaleFactor = 1.5;
+  scaleFactor = 1.3;
 in
 {
   imports = [
     ../home/modules/apps/element-desktop.nix
-    (import ../home/modules/apps/alacritty.nix { inherit terminalFontFamily scaleFactor; })
+    (import ../home/modules/apps/alacritty.nix { inherit pkgs terminalFontFamily scaleFactor; })
     ../home/modules/apps/atuin.nix
     ../home/modules/apps/carapace.nix
     (import ../home/modules/apps/foot.nix { inherit terminalFontFamily scaleFactor; })
     ../home/modules/apps/nushell.nix
+    ../home/modules/apps/starship.nix
     ../home/modules/apps/lf.nix
     ../home/modules/apps/tmux.nix
     ../home/modules/apps/yazi.nix
