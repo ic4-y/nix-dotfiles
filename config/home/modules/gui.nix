@@ -1,19 +1,19 @@
 { pkgs, ... }:
 
 let
-  bitwarden-wrapper = with pkgs; (writeShellScriptBin "bitwarden" ''
-    exec ${bitwarden}/bin/bitwarden --disable-gpu
+  wrapped-bitwarden = (pkgs.writeShellScriptBin "bitwarden" ''
+    exec ${pkgs.bitwarden}/bin/bitwarden --disable-gpu
   '');
 
-  wrapped-chromium = with pkgs; (writeShellScriptBin "chromium" ''
+  wrapped-chromium = (pkgs.writeShellScriptBin "chromium" ''
     exec firejail ${pkgs.chromium}/bin/chromium
   '');
 
-  wrapped-discord = with pkgs; (writeShellScriptBin "Discord" ''
+  wrapped-discord = (pkgs.writeShellScriptBin "Discord" ''
     exec firejail ${pkgs.discord}/bin/discord --disable-gpu
   '');
 
-  wrapped-firefox = with pkgs; (writeShellScriptBin "firefox" ''
+  wrapped-firefox = (pkgs.writeShellScriptBin "firefox" ''
     exec firejail ${pkgs.firefox}/bin/firefox
   '');
 in
@@ -28,7 +28,7 @@ in
     (symlinkJoin {
       name = "bitwarden";
       paths = [
-        bitwarden-wrapper
+        wrapped-bitwarden
         bitwarden
       ];
     })
@@ -92,6 +92,13 @@ in
     unstable.gnome-frog
     # upscayl AI image upscaler
     unstable.upscayl
+
+    # GPU screen recorder
+    unstable.gpu-screen-recorder
+    unstable.gpu-screen-recorder-gtk
+
+    # Web Video downloader GUI for yt-dlp
+    parabolic
 
     # Calibre ebooks
     calibre
