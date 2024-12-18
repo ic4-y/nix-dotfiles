@@ -9,6 +9,7 @@
     ../sys/modules/firejail.nix
     ../sys/modules/fonts.nix
     ../sys/modules/locale.nix
+    ../sys/modules/mullvad-vpn.nix
     ../sys/modules/networking-basic.nix
     ../sys/modules/networking-wifi.nix
     ../sys/modules/nix.nix
