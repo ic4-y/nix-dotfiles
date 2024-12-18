@@ -20,6 +20,7 @@
     ../sys/modules/system-packages.nix
     ../sys/modules/systemd-suspend.nix
     ../sys/modules/tablet.nix
+    ../sys/modules/tailscale.nix
     ../sys/modules/users.nix
     ../sys/modules/virtualization.nix
     ../sys/modules/xserver-2k.nix
