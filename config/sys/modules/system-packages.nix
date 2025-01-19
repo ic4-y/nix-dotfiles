@@ -12,8 +12,8 @@
     gptfdisk
     acpi
     virglrenderer
-    gnome.nautilus-python
-    gnome.polari
+    nautilus-python
+    polari
   ];
 
   # To make nautilus extensions gsettings available

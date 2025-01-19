@@ -1,20 +1,25 @@
 { pkgs, ... }:
 
 {
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    # driSupport = true;
+    # driSupport32Bit = true;
     extraPackages = with pkgs; [
       # mesa_drivers
-      rocm-opencl-icd
-      rocm-opencl-runtime
+      rocmPackages.clr
       rocmPackages.rocm-runtime
       amdvlk
     ];
     extraPackages32 = with pkgs; [
       driversi686Linux.amdvlk
     ];
+  };
+
+  hardware.amdgpu = {
+    opencl.enable = true;
+    amdvlk.enable = true;
+    amdvlk.support32Bit.enable = true;
   };
 
   programs.dconf.enable = true;

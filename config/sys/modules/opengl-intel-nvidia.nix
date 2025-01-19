@@ -2,13 +2,12 @@
 
 {
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.open = true;
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
     extraPackages = with pkgs; [
-      mesa_drivers
+      mesa.drivers
       intel-ocl
       intel-compute-runtime
       vaapiIntel

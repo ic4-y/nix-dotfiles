@@ -1,11 +1,11 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    gnome.dconf-editor
+    dconf-editor
     desktop-file-utils
     unstable.gnome-tweaks
     catppuccin-gtk
-    gnome.networkmanager-openvpn
-    gnome.gnome-terminal
+    networkmanager-openvpn
+    gnome-terminal
     warp
     unstable.amberol
     # don't put nautilus extensions here, see issue https://github.com/NixOS/nixpkgs/issues/126074

@@ -8,7 +8,7 @@
       material-icons
       material-design-icons
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-emoji
       # Replacement for Times New Roman, Arial
       liberation_ttf
