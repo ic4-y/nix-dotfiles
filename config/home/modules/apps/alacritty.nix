@@ -22,6 +22,7 @@ in
   home.file.".config/alacritty/alacritty.toml" = {
     executable = false;
     text = ''
+      [general]
       import = [
         # uncomment the flavour you want below:
         # "~/.config/alacritty/catppuccin-latte.toml"
