@@ -121,6 +121,9 @@ in
       ];
     })
 
+    # Librewolf
+    unstable.librewolf
+
     # Tor-Browser
     unstable.tor-browser-bundle-bin
 

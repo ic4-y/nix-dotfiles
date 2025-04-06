@@ -23,6 +23,9 @@
     #SQL
     unstable.sqlitebrowser
     unstable.beekeeper-studio
+
+    # Cursor
+    unstable.code-cursor
   ];
 
   # Configuration for helix editor
@@ -72,42 +75,6 @@
       unstable.vscode-extensions.rust-lang.rust-analyzer
       unstable.vscode-extensions.redhat.vscode-yaml
       unstable.vscode-extensions.tamasfe.even-better-toml
-
-      # Continue.dev extension
-      # (unstable.vscode-utils.buildVscodeMarketplaceExtension {
-      #   mktplcRef = {
-      #     name = "continue";
-      #     publisher = "Continue";
-      #     # version = "0.9.67";
-      #     version  = "0.9.221";
-      #     # sha256 = "sha256-xdM2zLIO4ydGt4M1hDDXEqQgXK2LYBRwOS5QfvG+aQ4=";
-      #     sha256 = "sha256-KwMAMmQ6ZMkRGvmIOo1SDF6TwZZyEutyLjQ2+ODf7Go=";
-      #     arch = "linux-x64";
-      #   };
-
-      #   nativeBuildInputs = [
-      #     pkgs.autoPatchelfHook
-      #   ];
-
-      #   buildInputs = [ pkgs.stdenv.cc.cc.lib ];
-
-      #   postInstall = ''
-      #     cd "$out/$installPrefix"
-      #     substituteInPlace "out/extension.js" \
-      #       --replace 'await showTutorial();' '//await showTutorial();'
-      #   '';
-      # })
-
-      #   # BasedPyright extension
-      #   (unstable.vscode-utils.buildVscodeMarketplaceExtension {
-      #     mktplcRef = {
-      #       name = "basedpyright";
-      #       publisher = "detachhead";
-      #       version  = "1.19.1";
-      #       sha256 = "";
-      #       arch = "linux-x64";
-      #     };
-      #   })
     ];
 
     userSettings = {
