@@ -13,6 +13,6 @@
 {
   home.packages = with pkgs; [
     davinci-resolve
-    unstable.mlv-app
+    mlv-app
   ];
 }

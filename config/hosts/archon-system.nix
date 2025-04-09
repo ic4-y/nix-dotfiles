@@ -11,8 +11,10 @@
     ../sys/modules/firejail.nix
     ../sys/modules/fonts.nix
     ../sys/modules/locale.nix
+    ../sys/modules/localsend.nix
     ../sys/modules/networking-basic.nix
     ../sys/modules/nix.nix
+    ../sys/modules/obs.nix
     ../sys/modules/opengl-amd.nix
     ../sys/modules/pipewire.nix
     ../sys/modules/printing.nix
