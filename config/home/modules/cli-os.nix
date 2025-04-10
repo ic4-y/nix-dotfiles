@@ -50,6 +50,13 @@
     # amdgpu monitoring
     unstable.amdgpu_top
 
+    # claud-code + aider
+    unstable.claude-code
+    unstable.aider-chat
+
+    # llm - use LLMs in the terminal
+    unstable.llm
+
     android-file-transfer
   ];
 

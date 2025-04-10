@@ -63,6 +63,9 @@ in
     # Obsidian
     unstable.obsidian
 
+    # Jan.ai ChatGPT-like local app
+    unstable.jan
+
     # Creating a wrapper for discord to run it in firejail and with --disable-gpu
     (symlinkJoin {
       name = "discord";
@@ -78,8 +81,10 @@ in
     # bruno API client, bye bye insomnia
     unstable.bruno
 
-    vlc
+    # hoppscotch, alternative to bruno/postman/insomnia
+    unstable.hoppscotch
 
+    vlc
 
     # notetaking app
     unstable.rnote

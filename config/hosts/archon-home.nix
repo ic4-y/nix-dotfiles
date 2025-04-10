@@ -17,9 +17,9 @@ in
     ../home/modules/apps/shotcut.nix
     ../home/modules/apps/starship.nix
     ../home/modules/apps/tmux.nix
+    ../home/modules/apps/whisper.nix
     ../home/modules/apps/yazi.nix
     ../home/modules/games/dosbox.nix
-    ../home/modules/games/games.nix
     ../home/modules/games/openra.nix
     ../home/modules/scripts
     ../home/modules/cli-os.nix
