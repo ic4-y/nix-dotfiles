@@ -140,11 +140,11 @@ in
   programs.brave = {
     enable = true;
     package = pkgs.brave;
-    commandLineArgs = [
-      "--enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,VaapiVideoEncoder,VaapiVideoDecoder,VaapiIgnoreDriverChecks,VaapiVideoDecodeLinuxGL"
-      "--use-gl=angle"
-      "--use-angle=gl"
-      "--ozone-platform=wayland"
-    ];
+    # commandLineArgs = [
+    #   "--enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,VaapiVideoEncoder,VaapiVideoDecoder,VaapiIgnoreDriverChecks,VaapiVideoDecodeLinuxGL"
+    #   "--use-gl=angle"
+    #   "--use-angle=gl"
+    #   "--ozone-platform=wayland"
+    # ];
   };
 }
