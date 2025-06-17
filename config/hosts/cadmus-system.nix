@@ -16,7 +16,8 @@
     ../sys/modules/nix.nix
     ../sys/modules/nvidia-prime.nix
     ../sys/modules/obs.nix
-    ../sys/modules/opengl-intel-nvidia.nix
+    ../sys/modules/opengl-intel.nix
+    ../sys/modules/opengl-nvidia.nix
     ../sys/modules/pipewire.nix
     ../sys/modules/printing.nix
     ../sys/modules/security.nix
@@ -28,7 +29,6 @@
     ../sys/modules/virtualization.nix
     ../sys/modules/xserver-2k.nix
     ../sys/modules/xserver-touchpad.nix
-    ../sys/modules/zerotier.nix
   ];
 
   hardware.enableAllFirmware = true;

@@ -9,7 +9,10 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.kernelParams = [ "intel_iommu=on" ];
+  boot.kernelParams = [
+    "intel_iommu=on"
+    "psmouse.synaptics_intertouch=1"
+  ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =

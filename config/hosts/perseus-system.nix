@@ -13,14 +13,14 @@
     ../sys/modules/networking-basic.nix
     ../sys/modules/networking-wifi.nix
     ../sys/modules/nix.nix
-    ../sys/modules/nvidia-prime.nix
-    ../sys/modules/opengl-intel-nvidia.nix
+    ../sys/modules/opengl-intel.nix
     ../sys/modules/pipewire.nix
     ../sys/modules/printing.nix
     ../sys/modules/security.nix
     ../sys/modules/system-packages.nix
     ../sys/modules/systemd-suspend.nix
     ../sys/modules/tablet.nix
+    ../sys/modules/tailscale.nix
     ../sys/modules/users.nix
     ../sys/modules/virtualization.nix
     ../sys/modules/xserver-2k.nix

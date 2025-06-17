@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
-  hardware.nvidia.open = true;
-
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
@@ -27,7 +24,6 @@
     enable = true;
     desktopManager.gnome.enable = true;
     xkb.layout = "us";
-    videoDrivers = [ "nvidia" ];
   };
 
   services.xserver.displayManager.gdm.enable = true;

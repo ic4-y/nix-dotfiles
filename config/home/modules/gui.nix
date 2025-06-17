@@ -45,8 +45,7 @@ in
     # To-do task manager
     unstable.endeavour
 
-    # Skype, signal, telegram, whatsapp, element, zulip
-    skypeforlinux
+    # signal, telegram, whatsapp, element, zulip
     unstable.signal-desktop
     unstable.tdesktop
     unstable.whatsapp-for-linux
