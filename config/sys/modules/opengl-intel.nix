@@ -4,7 +4,7 @@
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
-      mesa.drivers
+      mesa
       intel-ocl
       intel-compute-runtime
       vaapiIntel
