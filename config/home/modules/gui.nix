@@ -45,13 +45,11 @@ in
     # To-do task manager
     unstable.endeavour
 
-    # signal, telegram, whatsapp, element, zulip
+    # signal, telegram, whatsapp, element, zulip, threema
     unstable.signal-desktop
     unstable.tdesktop
-    unstable.whatsapp-for-linux
-    # unstable.element-desktop
-    unstable.zulip
-    unstable.mattermost-desktop
+    unstable.element-desktop
+
 
     # OnlyOffice
     unstable.onlyoffice-bin
