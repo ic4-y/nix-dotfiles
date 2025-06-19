@@ -14,7 +14,13 @@
       liberation_ttf
       google-fonts
 
-      (nerdfonts.override { fonts = [ "CascadiaCode" "DejaVuSansMono" "JetBrainsMono" "Inconsolata" "Iosevka" "Overpass" "FiraCode" ]; })
+      nerd-fonts.caskaydia-cove
+      nerd-fonts.dejavu-sans-mono
+      nerd-fonts.fira-code
+      nerd-fonts.inconsolata
+      nerd-fonts.iosevka
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.overpass
     ];
 
     fontconfig.defaultFonts = {
