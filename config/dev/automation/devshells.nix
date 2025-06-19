@@ -16,10 +16,11 @@ in
       { package = pkgs.age; }
       { package = pkgs.statix; }
       { package = pkgs.nvfetcher; }
+      { package = pkgs.treefmt; }
     ];
     nixago = [
       configs.conform
-      configs.treefmt
+      # configs.treefmt
       configs.editorconfig
       configs.lefthook
       configs.cog

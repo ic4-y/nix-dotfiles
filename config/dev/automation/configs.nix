@@ -7,6 +7,7 @@ in
 {
   treefmt = (mkNixago configs.treefmt) {
     data.formatter.prettier = {
+      command = "prettier";
       excludes = [
         "./package.json"
         "./pnpm-lock.yaml"
