@@ -12,6 +12,14 @@
   boot.kernelParams = [
     "intel_iommu=on"
     "psmouse.synaptics_intertouch=1"
+    "psmouse.elantech_smbus=0"
+    # "psmouse.rate=200"
+    # "psmouse.resolution=3200"
+    # try fixing touchpad suspend-resume issues
+    "i8042.reset"
+    "i8042.nomux"
+    "i8042.nopnp"
+    "i8042.noloop"
   ];
   boot.extraModulePackages = [ ];
 

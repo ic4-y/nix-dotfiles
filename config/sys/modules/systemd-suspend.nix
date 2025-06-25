@@ -1,3 +1,4 @@
+{ ... }:
 {
   systemd.sleep.extraConfig = ''
     AllowSuspend=yes

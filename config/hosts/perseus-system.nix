@@ -20,12 +20,15 @@
     ../sys/modules/security.nix
     ../sys/modules/system-packages.nix
     ../sys/modules/systemd-suspend.nix
+    ../sys/modules/systemd-suspend-touchpad-reset
     ../sys/modules/tablet.nix
     ../sys/modules/tailscale.nix
     ../sys/modules/users.nix
     ../sys/modules/virtualization.nix
     ../sys/modules/xserver-2k.nix
     ../sys/modules/xserver-touchpad.nix
+    # Add sops-nix wireless secrets integration
+    # ../sys/modules/sops-wireless.nix
   ];
 
 
