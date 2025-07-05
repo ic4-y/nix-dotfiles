@@ -20,7 +20,7 @@
     ../sys/modules/security.nix
     ../sys/modules/system-packages.nix
     ../sys/modules/systemd-suspend.nix
-    ../sys/modules/systemd-suspend-touchpad-reset
+    ../sys/modules/systemd-suspend-touchpad-reset.nix
     ../sys/modules/tablet.nix
     ../sys/modules/tailscale.nix
     ../sys/modules/users.nix
