@@ -147,16 +147,12 @@
         nixosModules = {
           disko-test = ./config/sys/modules/hardware/disko-test.nix;
           impermanence = ./config/sys/modules/impermanence.nix;
-          disko-minimal = ./config/sys/modules/hardware/disko-minimal.nix; # New minimal disko config
         };
 
         checks.x86_64-linux = {
           disko-btrfs-test = import ./tests/disko-btrfs-test.nix {
             inherit pkgs self lib disko impermanence;
           };
-          # minimal-disko-test = import ./tests/minimal-disko.nix { # New minimal test
-          #   inherit pkgs self lib disko;
-          # };
         };
       };
 }
