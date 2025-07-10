@@ -24,6 +24,7 @@
     ../sys/modules/tablet.nix
     ../sys/modules/tailscale.nix
     ../sys/modules/users.nix
+    ../sys/modules/sshd.nix # Add SSHD module
     ../sys/modules/virtualization.nix
     ../sys/modules/xserver-2k.nix
     ../sys/modules/xserver-touchpad.nix
