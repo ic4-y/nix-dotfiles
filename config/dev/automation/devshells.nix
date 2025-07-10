@@ -17,6 +17,7 @@ in
       { package = pkgs.statix; }
       { package = pkgs.nvfetcher; }
       { package = pkgs.treefmt; }
+      { package = pkgs.nodejs_22; }
     ];
     nixago = [
       configs.conform
