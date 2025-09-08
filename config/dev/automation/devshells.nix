@@ -14,6 +14,7 @@ in
       { package = pkgs.nixpkgs-fmt; }
       { package = pkgs.sops; }
       { package = pkgs.age; }
+      { package = pkgs.ssh-to-age; }
       { package = pkgs.statix; }
       { package = pkgs.nvfetcher; }
       { package = pkgs.treefmt; }
