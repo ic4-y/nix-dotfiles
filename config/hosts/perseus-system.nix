@@ -8,9 +8,10 @@
     ../sys/modules/bluetooth.nix
     ../sys/modules/boot.nix
     ../sys/modules/firejail.nix
-    ../sys/modules/flatpak.nix
     ../sys/modules/fonts.nix
     ../sys/modules/locale.nix
+    ../sys/modules/localsend.nix
+    ../sys/modules/mullvad-vpn.nix
     ../sys/modules/networking-basic.nix
     ../sys/modules/networking-wifi.nix
     ../sys/modules/nix.nix

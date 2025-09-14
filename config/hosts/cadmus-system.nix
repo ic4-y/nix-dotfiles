@@ -3,11 +3,9 @@
     ../sys/modules/console/console-laptop.nix
     ../sys/modules/hardware/hardware-cadmus.nix
     ../sys/modules/kernels/linuxPackages.nix
-    # ../sys/modules/kernels/kernel-6.1.nix
     ../sys/modules/bluetooth.nix
     ../sys/modules/boot.nix
     ../sys/modules/firejail.nix
-    ../sys/modules/flatpak.nix
     ../sys/modules/fonts.nix
     ../sys/modules/locale.nix
     ../sys/modules/localsend.nix
