@@ -12,6 +12,7 @@ in
     ../home/modules/apps/davinci-resolve.nix
     (import ../home/modules/apps/foot.nix { inherit terminalFontFamily scaleFactor; })
     ../home/modules/apps/nushell.nix
+    ../home/modules/apps/jan.nix
     ../home/modules/apps/lf.nix
     ../home/modules/apps/obs.nix
     ../home/modules/apps/shotcut.nix
