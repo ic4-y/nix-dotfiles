@@ -1,11 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, powerOnBoot, ... }:
 {
   hardware.bluetooth = {
     enable = true;
     # disabledPlugins = [ "sap" ];
     # hsphfpd.enable = true;
     package = pkgs.bluez;
-    powerOnBoot = false;
+    powerOnBoot = powerOnBoot;
   };
 
   services.blueman.enable = true;
