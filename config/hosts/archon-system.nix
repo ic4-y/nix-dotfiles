@@ -1,9 +1,13 @@
+{ pkgs, inputs, system, ... }:
+let
+  powerOnBoot = true;
+in
 {
   imports = [
     ../sys/modules/console/console-desktop.nix
     ../sys/modules/hardware/hardware-archon.nix
     ../sys/modules/kernels/linuxPackages.nix
-    ../sys/modules/bluetooth.nix
+    (import ../sys/modules/bluetooth.nix { inherit pkgs inputs system powerOnBoot; })
     ../sys/modules/boot.nix
     ../sys/modules/firejail.nix
     ../sys/modules/fonts.nix
