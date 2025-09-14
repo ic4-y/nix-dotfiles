@@ -33,12 +33,11 @@
     ranger
     ncdu
     xz
-    unstable.youtube-dl
     unstable.yt-dlp
 
     unrar
     unstable.asciinema
-    unstable.moc
+    moc
     unstable.havoc
     unstable.tiny
     unstable.tealdeer
@@ -50,9 +49,15 @@
     # amdgpu monitoring
     unstable.amdgpu_top
 
-    # claud-code + aider
+    # claude-code + aider + aichat + opencode
     unstable.claude-code
+    unstable.qwen-code
     unstable.aider-chat
+    unstable.aichat
+    unstable.opencode
+
+    # glow markdown in terminal
+    unstable.glow
 
     # llm - use LLMs in the terminal
     unstable.llm
