@@ -23,9 +23,6 @@
     #SQL
     unstable.sqlitebrowser
     unstable.beekeeper-studio
-
-    # Cursor
-    unstable.code-cursor
   ];
 
   # Configuration for helix editor
@@ -59,7 +56,7 @@
     enable = true;
     package = pkgs.vscode-fhs;
 
-    extensions = with pkgs; [
+    profiles.default.extensions = with pkgs; [
       unstable.vscode-extensions.pkief.material-icon-theme
       unstable.vscode-extensions.catppuccin.catppuccin-vsc
 
@@ -77,7 +74,7 @@
       unstable.vscode-extensions.tamasfe.even-better-toml
     ];
 
-    userSettings = {
+    profiles.default.userSettings = {
       "continue.telemetryEnabled" = false;
       "workbench.iconTheme" = "material-icon-theme";
       "workbench.colorTheme" = "Catppuccin Mocha";
