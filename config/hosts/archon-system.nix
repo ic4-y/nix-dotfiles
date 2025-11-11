@@ -10,6 +10,7 @@ in
     (import ../sys/modules/bluetooth.nix { inherit pkgs inputs system powerOnBoot; })
     ../sys/modules/boot.nix
     ../sys/modules/firejail.nix
+    ../sys/modules/bwrap-apps
     ../sys/modules/fonts.nix
     ../sys/modules/locale.nix
     ../sys/modules/localsend.nix
@@ -32,4 +33,7 @@ in
 
   networking.hostName = "archon";
   system.stateVersion = "21.05";
+
+  sys.modules.bwrap-apps.enable = true;
+  sys.modules.bwrap-apps.sandboxed-discord.enable = true;
 }

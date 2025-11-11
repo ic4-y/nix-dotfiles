@@ -56,6 +56,13 @@ Generate comprehensive documentation for the new features within the `docs/` dir
 - **Content Source:** User-provided conceptual documentation.
 - **Sections:** Wireguard Implementation, Systemd Network Namespaces, Wireguard Configuration for Namespaces, Running Applications in Namespaces (Brave Example), Bubblewrap Integration (Optional), Security Benefits.
 
+### 7.1. Advanced Application Isolation: Bubblewrap with Wireguard Network Namespaces
+
+- **Document Title:** `docs/07-01-bubblewrap-wireguard-network-namespace-isolation.md`
+- **Key Topics:** Combining Bubblewrap sandboxing with Wireguard VPNs in systemd network namespaces, step-by-step implementation for wrapping Nix derivations, and security benefits.
+- **Content Source:** Existing documentation on Wireguard network namespaces and Bubblewrap sandboxing.
+- **Sections:** Overview of Combined Isolation, Prerequisites, Step-by-Step Implementation (Configure Wireguard, Modify Bubblewrap Wrapper, Define Sandboxed App, Integrate), Security Benefits.
+
 ### 8. Make the Tailscale VPN configuration more declarative
 
 - **Document Title:** `docs/tailscale-declarative-vpn.md`
@@ -84,6 +91,13 @@ Generate comprehensive documentation for the new features within the `docs/` dir
 - **Content Source:** Home-manager documentation, NixOS email client configurations.
 - **Sections:** Introduction to Home-manager for Email, Configuration Steps, Supported Email Clients, Cross-Machine Availability, Security Considerations.
 
+### 13. Declarative Sandboxing with Bubblewrap for Nix Derivations
+
+- **Document Title:** `docs/13-bubble-wrap-sandboxing-for-nix-derivations.md`
+- **Key Topics:** Wrapping Nix derivations with Bubblewrap, reusable wrapper function, defining sandbox policies, integrating sandboxed packages into system/Home-Manager, and advanced topics like combining with network namespaces.
+- **Content Source:** User request, Bubblewrap documentation, Nixpkgs examples.
+- **Sections:** Core Concept: Wrapping Nix Derivations, Implementation Plan (Wrapper Function, Define Policies, Integrate Packages), Advanced Topics (Network Namespaces, XDG Portals).
+
 ## Documentation Generation Workflow
 
 ```mermaid
@@ -97,10 +111,11 @@ graph TD
     C --> D5[Plan Nebula Network Doc];
     C --> D6[Plan Wireguard Isolation Doc];
     C --> D7[Plan Tailscale Declarative Doc];
+    C --> D7_1[Plan Bubblewrap Wireguard Isolation Doc];
     C --> D8[Plan Github Actions CI Doc];
     C --> D9[Plan NixOS VM Testing Doc];
     C --> D10[Plan Home-manager Email Doc];
-    D1 & D2 & D3 & D4 & D5 & D6 & D7 & D8 & D9 & D10 --> E{Present Plan to User};
+    D1 & D2 & D3 & D4 & D5 & D6 & D7 & D7_1 & D8 & D9 & D10 --> E{Present Plan to User};
     E -- Approved --> F[Ask to Write Plan to Markdown];
     F -- Yes --> G[Write Plan to Markdown File];
     G --> H[Switch to Code Mode];
