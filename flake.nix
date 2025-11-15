@@ -13,6 +13,9 @@
     nixvim.url = "github:ic4-y/nixvim-config";
     nixvim.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
+    nixpak.url = "github:nixpak/nixpak";
+    nixpak.inputs.nixpkgs.follows = "nixpkgs";
+
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -32,7 +35,7 @@
     };
   };
 
-  outputs = { std, self, nixpkgs, nixvim, nixpkgs-unstable, home-manager, disko, impermanence, ... }@inputs:
+  outputs = { std, self, nixpkgs, nixvim, nixpak, nixpkgs-unstable, home-manager, disko, impermanence, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -70,6 +73,7 @@
         nixosConfigurations = {
           archon = lib.nixosSystem {
             inherit system;
+            specialArgs = { inherit inputs nixpak; }; # Pass all inputs and nixpak as specialArgs
             modules = [
               ./config/hosts/archon-system.nix
               {
