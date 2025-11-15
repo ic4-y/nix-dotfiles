@@ -1,0 +1,27 @@
+pre-commit:
+  commands:
+    nix-fmt:
+      run: |
+        if command -v nixpkgs-fmt >/dev/null 2>&1; then
+          nixpkgs-fmt flake.nix nix/**/*.nix || true
+        fi
+      stage_fixed: true
+    secrets-scan:
+      run: |
+        if command -v ripsecrets >/dev/null 2>&1; then
+          ripsecrets --strict-ignore --no-banner `git diff --cached --name-only --diff-filter=ACM` || true
+        fi
+
+commit-msg:
+  commands:
+    conventional-commit:
+      run: |
+        # Allow WIP/fixup/squash during local iteration
+        if [[ "$(head -n 1 {1})" =~ ^WIP(:.*)?$|^wip(:.*)?$|^fixup\!.*|^squash\!.* ]]; then
+          exit 0
+        fi
+        if command -v conform >/dev/null 2>&1; then
+          conform enforce --commit-msg-file {1}
+        else
+          echo "WARNING: conform not installed; please ensure commit messages follow Conventional Commits." >&2
+        fi

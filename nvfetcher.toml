@@ -1,4 +1,0 @@
-[vscode-continue]
-src.vsmarketplace = "continue.continue"
-fetch.vsmarketplace = "continue.continue"
-passthru = { name = "continue", publisher = "continue" }

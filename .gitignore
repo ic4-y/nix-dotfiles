@@ -2,6 +2,7 @@
 .vscode/settings.json
 *.secrets
 _sources/
+result
 
 # Nix
 .data
@@ -28,9 +29,3 @@ secrets.yaml
 
 # macOS-specific files
 .DS_Store
-
-# nixago: ignore-linked-files
-/cog.toml
-/lefthook.yml
-/.conform.yaml
-/treefmt.toml

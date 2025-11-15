@@ -1,0 +1,99 @@
+# Conform configuration for NixOS Dotfiles
+# Ensures Conventional Commits + project-specific conventions compatible with lefthook
+
+version: 1
+
+commit_message:
+  # Enforce Conventional Commits: type(scope)!: description
+  conventional_commits: true
+
+  # Allowed types, aligned with dotfiles/NixOS configuration workflow
+  types:
+    - feat # new system configuration or feature
+    - fix # bug fix in configuration or module
+    - docs # documentation only changes
+    - style # formatting, no functional change
+    - refactor # restructure configuration without changing behavior
+    - perf # performance improvements in builds or scripts
+    - test # test configurations or scripts only
+    - build # build system, dependencies, or flake updates
+    - ci # CI/CD configuration changes
+    - chore # tooling, maintenance, non-production changes
+    - revert # revert of previous commit
+    - deps # dependency updates (nixpkgs, inputs, packages)
+
+  # Require a scope to keep changes traceable to system or configuration domain
+  # Examples: archon, perseus, cadmus (hosts), config, packages, pkgs, docs, ci
+  require_scope: true
+
+  # Example valid scopes for linting/correction hints (not strictly enforced):
+  scopes:
+    # Host systems
+    - archon
+    - perseus
+    - cadmus
+
+    # Configuration categories
+    - config
+    - hosts
+    - sys
+    - home
+    - packages
+    - pkgs
+    - scripts
+    - tests
+
+    # System modules
+    - networking
+    - hardware
+    - kernels
+    - users
+    - security
+    - virtualization
+    - display
+    - audio
+
+    # Home modules
+    - editors
+    - apps
+    - wayland
+
+    # Infrastructure
+    - docs
+    - ci
+    - deps
+    - tooling
+    - flake
+    - backup
+    - monitoring
+
+  # Subject (description) rules
+  subject:
+    # Max length for first line
+    max_length: 100
+    # Do not allow trailing period
+    disallow_trailing_period: true
+    # Require lowercase start (except allowed acronyms)
+    case: lower
+
+  # Additional strictness
+  require_body: false
+  require_footer: false
+
+  # Issue reference guidance (non-blocking, validated via regex if present)
+  # Supports patterns like:
+  # - GH-123 (GitHub issue)
+  # - #123 (short GitHub issue)
+  # - TASK-456 (project management tool)
+  references:
+    allowed:
+      - "(GH-[0-9]+)"
+      - "(#[0-9]+)"
+      - "([A-Z]+-[0-9]+)"
+
+  # Examples that should pass:
+  # - feat(archon): add new display configuration for 4K monitor
+  # - fix(networking): resolve WiFi connectivity issues on perseus
+  # - docs(config): update README with new host setup instructions
+  # - deps(pkgs): update nixpkgs to latest stable version
+  # - chore(flake): add new development tools to devShell
